@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programs | Shri Sai Infotech</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .program-block { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 12px; 
+            margin-bottom: 30px; 
+            border-left: 5px solid #F5A623; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            transition: 0.3s;
+        }
+        .program-block:hover { transform: translateX(10px); }
+        .program-block h2 { color: #0A1F44; margin-bottom: 15px; }
+        .program-features { list-style: none; margin: 20px 0; }
+        .program-features li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; color: #555; }
+        .program-features i { color: #F5A623; }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+    <div class="container">
+        
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Shri Sai Infotech Logo" class="logo-img">
+            <span class="logo-text">SHRI SAI INFOTECH</span>
+        </a>
+
+        <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html" class="btn btn-primary" style="color: var(--primary);">Register</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <header class="page-header" style="background: #0A1F44; padding: 140px 0 60px; text-align: center; color: white;">
+        <div class="container">
+            <h1>Special Programs</h1>
+            <p style="color: #cbd5e1;">Accelerate your career with our specialized training modules</p>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <div class="program-block">
+                <h2>Summer Training Program</h2>
+                <p>Designed for college students (B.Tech, BCA, MCA) to utilize their summer break effectively. Learn practical coding skills and build a project from scratch.</p>
+                <ul class="program-features">
+                    <li><i class="fa-solid fa-check"></i> Duration: 4 - 6 Weeks</li>
+                    <li><i class="fa-solid fa-check"></i> Live Project Development</li>
+                    <li><i class="fa-solid fa-check"></i> Certificate of Completion</li>
+                </ul>
+                <a href="register.html" class="btn btn-primary">Apply for Summer Training</a>
+            </div>
+
+            <div class="program-block">
+                <h2>Industrial Internship</h2>
+                <p>Gain exposure to the real corporate world. Work on live client projects under the mentorship of senior developers.</p>
+                <ul class="program-features">
+                    <li><i class="fa-solid fa-check"></i> Duration: 3 - 6 Months</li>
+                    <li><i class="fa-solid fa-check"></i> Experience Letter Provided</li>
+                    <li><i class="fa-solid fa-check"></i> Pre-placement Offer (PPO) for top performers</li>
+                </ul>
+                <a href="register.html" class="btn btn-primary">Apply for Internship</a>
+            </div>
+
+            <div class="program-block">
+                <h2>Job-Ready Program</h2>
+                <p>A comprehensive bootcamp style program that takes you from zero to hero. Includes resume building, mock interviews, and guaranteed interview opportunities.</p>
+                <ul class="program-features">
+                    <li><i class="fa-solid fa-check"></i> Full Stack Development / Data Science</li>
+                    <li><i class="fa-solid fa-check"></i> 100% Placement Support</li>
+                    <li><i class="fa-solid fa-check"></i> Soft Skills Training</li>
+                </ul>
+                <a href="register.html" class="btn btn-primary">Join Job-Ready Program</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

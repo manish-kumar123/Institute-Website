@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Sai Infotech | Shape Your Future with Technology</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+    <div class="container">
+        
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Shri Sai Infotech Logo" class="logo-img">
+            <span class="logo-text">SHRI SAI INFOTECH</span>
+        </a>
+
+        <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html" class="btn btn-primary" style="color: var(--primary);">Register</a></li>
+        </ul>
+    </div>
+</nav>
+    <main>
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="animate-up">Shape Your Future with <span class="text-gold">Technology</span></h1>
+            <p class="animate-up delay-1">Empowering students with industry-ready skills in IT, Tally, Computer Science & More.</p>
+            <div class="hero-btns animate-up delay-2">
+                <a href="courses.html" class="btn btn-primary">Explore Courses</a>
+                <a href="register.html" class="btn btn-outline">Register Now</a>
+            </div>
+        </div>
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </section>
+
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h2 class="counter" data-target="3000">0</h2><span>+</span>
+                    <p>Students Enrolled</p>
+                </div>
+                <div class="stat-item">
+                    <h2 class="counter" data-target="20">0</h2><span>+</span>
+                    <p>Courses Offered</p>
+                </div>
+                <div class="stat-item">
+                    <h2 class="counter" data-target="95">0</h2><span>%</span>
+                    <p>Placement Rate</p>
+                </div>
+                <div class="stat-item">
+                    <h2 class="counter" data-target="15">0</h2><span>+</span>
+                    <p>Years Excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section courses-section" id="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Popular Courses</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <!-- <div class="course-grid">
+                <div class="course-card">
+                    <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+                    <h3>Artificial Intelligence</h3>
+                    <span class="badge">Short Term</span>
+                    <p class="duration"><i class="fa-regular fa-clock"></i> 3 Months</p>
+                    <a href="courses.html" class="btn-link">View Details <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="course-card">
+                    <div class="card-icon"><i class="fa-brands fa-python"></i></div>
+                    <h3>Python Mastery</h3>
+                    <span class="badge">Short Term</span>
+                    <p class="duration"><i class="fa-regular fa-clock"></i> 3 Months</p>
+                    <a href="courses.html" class="btn-link">View Details <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="course-card">
+                    <div class="card-icon"><i class="fa-solid fa-calculator"></i></div>
+                    <h3>Tally Prime & GST</h3>
+                    <span class="badge">Short Term</span>
+                    <p class="duration"><i class="fa-regular fa-clock"></i> 3 Months</p>
+                    <a href="courses.html" class="btn-link">View Details <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="course-card">
+                    <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>O Level (NIELIT)</h3>
+                    <span class="badge badge-long">Long Term</span>
+                    <p class="duration"><i class="fa-regular fa-clock"></i> 1 Year</p>
+                    <a href="courses.html" class="btn-link">View Details <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="course-card">
+                    <div class="card-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <h3>Graphic Designing</h3>
+                    <span class="badge badge-long">Long Term</span>
+                    <p class="duration"><i class="fa-regular fa-clock"></i> 1 Year</p>
+                    <a href="courses.html" class="btn-link">View Details <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="course-card">
+                    <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Web Development</h3>
+                    <span class="badge">Short Term</span>
+                    <p class="duration"><i class="fa-regular fa-clock"></i> 3 Months</p>
+                    <a href="courses.html" class="btn-link">View Details <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div> -->
+            <div class="course-grid">
+
+    <div class="course-card show short card-ai">
+        <div>
+            <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Artificial Intelligence Course</h3>
+            <span class="badge">Short Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 3 Months</p>
+            <p style="color: #64748b; font-size: 0.95rem;">Introduction to AI, Machine Learning basics, and data processing.</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/ai-course.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="course-card show short card-tally">
+        <div>
+            <div class="card-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+            <h3>Financial Accounting in Tally Prime</h3>
+            <span class="badge">Short Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 3 Months</p>
+            <p style="color: #64748b; font-size: 0.95rem;">Tally Prime & MARG ERP 9 with GST. Complete business accounting.</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/tally.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="course-card show short card-office">
+        <div>
+            <div class="card-icon"><i class="fa-brands fa-microsoft"></i></div>
+            <h3>Computer Basics (AI)</h3>
+            <span class="badge">Short Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 3 Months</p>
+            <p style="color: #64748b; font-size: 0.95rem;">MS Office suite mastery enhanced with AI tools for productivity.</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/basics.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="course-card show long card-dca">
+        <div>
+            <div class="card-icon"><i class="fa-solid fa-laptop"></i></div>
+            <h3>Diploma in Comp. App (DCA)</h3>
+            <span class="badge badge-long">Long Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 1 Year</p>
+            <p style="color: #64748b; font-size: 0.95rem;">Fundamental diploma covering Office, Internet, and basic programming.</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/dca.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="course-card show long card-caa">
+        <div>
+            <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Cert. Accounting (CAA)</h3>
+            <span class="badge badge-long">Long Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 1 Year</p>
+            <p style="color: #64748b; font-size: 0.95rem;">Advanced accounting principles, taxation, and computerized finance.</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/caa.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="course-card show long card-olevel">
+        <div>
+            <div class="card-icon"><i class="fa-solid fa-certificate"></i></div>
+            <h3>O Level (NIELIT)</h3>
+            <span class="badge badge-long">Long Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 1 Year</p>
+            <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;">
+                Govt recognized certification. Essential for government job aspirants.
+            </p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/olevel.pdf" class="btn-prospectus" download>
+                <i class="fa-solid fa-file-pdf"></i> Prospectus
+            </a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+</div>
+            <div class="center-btn">
+                <a href="courses.html" class="btn btn-primary">View All Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section why-choose">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <h3>Expert Faculty</h3>
+                    <p>Learn from industry veterans with years of real-world experience.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h3>Job-Ready</h3>
+                    <p>Curriculum designed to meet current market demands and standards.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-handshake"></i>
+                    <h3>Placement Support</h3>
+                    <p>Dedicated assistance to help you land your dream job.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-clock"></i>
+                    <h3>Flexible Timings</h3>
+                    <p>Morning and evening batches available for students and professionals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section programs-highlight">
+        <div class="container">
+            <div class="section-header">
+                <h2>Special Programs</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <h3>Summer Training</h3>
+                    <p>Intensive 4-6 week coding bootcamps for college students.</p>
+                    <a href="programs.html">Learn More &rarr;</a>
+                </div>
+                <div class="program-card">
+                    <h3>Internship Program</h3>
+                    <p>Live project experience with certification and guidance.</p>
+                    <a href="programs.html">Apply Now &rarr;</a>
+                </div>
+                <div class="program-card">
+                    <h3>Job-Ready Program</h3>
+                    <p>Comprehensive training with 100% placement assistance.</p>
+                    <a href="programs.html">Get Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Student Success Stories</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"The Web Development course at Shri Sai Infotech completely changed my career path. The practical approach is amazing."</p>
+                        <h4>Rahul Sharma</h4>
+                        <span>Web Developer</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"I learnt Tally Prime here. The teachers are very supportive and the placement team helped me get a job immediately."</p>
+                        <h4>Priya Verma</h4>
+                        <span>Accountant</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"Best institute in Haridwar for O Level. The labs are well-equipped and the study material is very helpful."</p>
+                        <h4>Amit Kumar</h4>
+                        <span>Govt. Aspirant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Start Your Career Journey Today</h2>
+            <a href="register.html" class="btn btn-primary">Register Now</a>
+        </div>
+    </section>
+</main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Shri Sai Infotech is a premier computer education institute committed to empowering students with industry-ready IT skills and placement support.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61587988986373"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/shrisaiinfotech.haridwar"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://chat.whatsapp.com/G5r8Kua8wZn7JbSjRX3TrF"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="courses.html">All Courses</a></li>
+                        <li><a href="programs.html">Summer Training</a></li>
+                        <li><a href="register.html">Admission</a></li>
+                        <li><a href="admin-dashboard.html">Admin Login</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> 350, Govindpuri, S.M.J.N Road,<br> Ranipur More, Haridwar</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 9368421416/19, 9870928156</p>
+                    <p><i class="fa-solid fa-envelope"></i> shrisaiinfotech.edu@gmail.com</p>
+                    <div style="margin-top: 10px; width: 100%; height: 100px; background: #233658; border-radius: 8px;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d864.4035362044957!2d78.13906616958539!3d29.93300869843623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3909464f543b838b%3A0x306e5b000173f1f4!2sShri%20Sai%20Institute!5e0!3m2!1sen!2sin!4v1771398174463!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Shri Sai Infotech. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>z

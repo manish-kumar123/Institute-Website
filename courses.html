@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses | Shri Sai Infotech</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Filter Styles */
+        .filter-bar { display: flex; justify-content: center; gap: 15px; margin-bottom: 50px; flex-wrap: wrap; }
+        .filter-btn { 
+            padding: 12px 30px; 
+            border: 2px solid #0A1F44; 
+            background: transparent; 
+            color: #0A1F44; 
+            border-radius: 30px; 
+            cursor: pointer; 
+            font-weight: 600; 
+            transition: 0.3s; 
+        }
+        .filter-btn.active, .filter-btn:hover { background: #0A1F44; color: white; }
+        
+        /* Animation for filtering */
+        .course-card { display: none; animation: fadeIn 0.5s ease; }
+        .course-card.show { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+    <div class="container">
+        
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Shri Sai Infotech Logo" class="logo-img">
+            <span class="logo-text">SHRI SAI INFOTECH</span>
+        </a>
+
+        <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html" class="btn btn-primary" style="color: var(--primary);">Register</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <header class="page-header" style="background: #0A1F44; padding: 140px 0 60px; text-align: center; color: white;">
+        <div class="container">
+            <h1>Our Courses</h1>
+            <p style="color: #cbd5e1; margin-top: 10px;">Choose from a wide range of industry-oriented courses designed for your career.</p>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <div class="filter-bar">
+                <button class="filter-btn active" onclick="filterCourses('all')">All Courses</button>
+                <button class="filter-btn" onclick="filterCourses('short')">Short-Term</button>
+                <button class="filter-btn" onclick="filterCourses('long')">Long-Term</button>
+            </div>
+
+            <!-- <div class="course-grid">
+                
+                <div class="course-card show short">
+                    <div class="card-icon"><i class="fa-brands fa-python"></i></div>
+                    <h3>Python Mastery</h3>
+                    <span class="badge">Short Term</span>
+                    <p class="duration"><i class="fa-regular fa-clock"></i> 3 Months</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">Master Python from basics to advanced data structures and algorithms.</p>
+                    <a href="register.html" class="btn btn-primary" style="width: 100%; text-align: center;">Enroll Now</a>
+                </div>
+
+                <div class="course-card show short">
+                    <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Web Development</h3>
+                    <span class="badge">Short Term</span>
+                    <p class="duration"><i class="fa-regular fa-clock"></i> 3 Months</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">Full stack development using HTML, CSS, JS, Node.js and React.</p>
+                    <a href="register.html" class="btn btn-primary" style="width: 100%; text-align: center;">Enroll Now</a>
+                </div>
+
+                <div class="course-card show short">
+                    <div class="card-icon"><i class="fa-solid fa-calculator"></i></div>
+                    <h3>Tally Prime & GST</h3>
+                    <span class="badge">Short Term</span>
+                    <p class="duration"><i class="fa-regular fa-clock"></i> 3 Months</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">Complete accounting solution including GST filing and payroll.</p>
+                    <a href="register.html" class="btn btn-primary" style="width: 100%; text-align: center;">Enroll Now</a>
+                </div>
+
+                <div class="course-card show long">
+                    <div class="card-icon"><i class="fa-solid fa-certificate"></i></div>
+                    <h3>O Level (NIELIT)</h3>
+                    <span class="badge badge-long">Long Term</span>
+                    <p class="duration"><i class="fa-regular fa-clock"></i> 1 Year</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">Government recognized foundation course in computer applications.</p>
+                    <a href="register.html" class="btn btn-primary" style="width: 100%; text-align: center;">Enroll Now</a>
+                </div>
+
+                <div class="course-card show long">
+                    <div class="card-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <h3>Graphic Designing</h3>
+                    <span class="badge badge-long">Long Term</span>
+                    <p class="duration"><i class="fa-regular fa-clock"></i> 1 Year</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">Master Photoshop, Illustrator, CorelDraw and InDesign.</p>
+                    <a href="register.html" class="btn btn-primary" style="width: 100%; text-align: center;">Enroll Now</a>
+                </div>
+
+                <div class="course-card show long">
+                    <div class="card-icon"><i class="fa-solid fa-desktop"></i></div>
+                    <h3>PGDCA</h3>
+                    <span class="badge badge-long">Long Term</span>
+                    <p class="duration"><i class="fa-regular fa-clock"></i> 1 Year</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">Post Graduate Diploma in Computer Applications for graduates.</p>
+                    <a href="register.html" class="btn btn-primary" style="width: 100%; text-align: center;">Enroll Now</a>
+                </div>
+            </div> -->
+            <div class="course-grid">
+    
+    <div class="course-grid">
+
+    <div class="course-card show short card-ai">
+        <div>
+            <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Artificial Intelligence Course</h3>
+            <span class="badge">Short Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 3 Months</p>
+            <p style="color: #64748b; font-size: 0.95rem;">Introduction to AI, Machine Learning basics, and data processing.</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/ai-course.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="course-card show short card-coding">
+        <div>
+            <div class="card-icon"><i class="fa-solid fa-code-branch"></i></div>
+            <h3>Mastery in Programming</h3>
+            <span class="badge">Short Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 3 Months</p>
+            <p style="color: #64748b; font-size: 0.95rem;">Python, Java, PHP, SQL, Javascript. Complete backend & logic training.</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/programming.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="course-card show short card-web">
+        <div>
+            <div class="card-icon"><i class="fa-solid fa-globe"></i></div>
+            <h3>Ultimate Web Development</h3>
+            <span class="badge">Short Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 3 Months</p>
+            <p style="color: #64748b; font-size: 0.95rem;">Full Stack Development: HTML, CSS, JS, Node.js, Database connectivity.</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/web-dev.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="course-card show short card-photo">
+        <div>
+            <div class="card-icon"><i class="fa-solid fa-camera-retro"></i></div>
+            <h3>Photoshop Masterclass</h3>
+            <span class="badge">Short Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 3 Months</p>
+            <p style="color: #64748b; font-size: 0.95rem;">Advanced photo editing, retouching, and digital art composition.</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/photoshop.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="course-card show short card-tally">
+        <div>
+            <div class="card-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+            <h3>Financial Accounting in Tally Prime</h3>
+            <span class="badge">Short Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 3 Months</p>
+            <p style="color: #64748b; font-size: 0.95rem;">Tally Prime & MARG ERP 9 with GST. Complete business accounting.</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/tally.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="course-card show short card-office">
+        <div>
+            <div class="card-icon"><i class="fa-brands fa-microsoft"></i></div>
+            <h3>Computer Basics (AI)</h3>
+            <span class="badge">Short Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 3 Months</p>
+            <p style="color: #64748b; font-size: 0.95rem;">MS Office suite mastery enhanced with AI tools for productivity.</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/basics.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="course-card show short card-typing">
+        <div>
+            <div class="card-icon"><i class="fa-solid fa-keyboard"></i></div>
+            <h3>Hindi/English Typing</h3>
+            <span class="badge">Short Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 3 Months</p>
+            <p style="color: #64748b; font-size: 0.95rem;">Increase typing speed and accuracy for government exams and jobs.</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/typing.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="course-card show long card-olevel">
+        <div>
+            <div class="card-icon"><i class="fa-solid fa-certificate"></i></div>
+            <h3>O LEVEL (NIELIT)</h3>
+            <span class="badge badge-long">Long Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 1 Year</p>
+            <p style="color: #64748b; font-size: 0.95rem;">Government recognized certification essential for govt jobs (NIELIT).</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/olevel.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="course-card show long card-design">
+        <div>
+            <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
+            <h3>Graphic Designing</h3>
+            <span class="badge badge-long">Long Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 1 Year</p>
+            <p style="color: #64748b; font-size: 0.95rem;">Complete design suite: Photoshop, CorelDraw, Illustrator, InDesign.</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/graphic-design.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="course-card show long card-caa">
+        <div>
+            <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Cert. Accounting (CAA)</h3>
+            <span class="badge badge-long">Long Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 1 Year</p>
+            <p style="color: #64748b; font-size: 0.95rem;">Advanced accounting principles, taxation, and computerized finance.</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/caa.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="course-card show long card-dca">
+        <div>
+            <div class="card-icon"><i class="fa-solid fa-laptop"></i></div>
+            <h3>Diploma in Comp. App (DCA)</h3>
+            <span class="badge badge-long">Long Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 1 Year</p>
+            <p style="color: #64748b; font-size: 0.95rem;">Fundamental diploma covering Office, Internet, and basic programming.</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/dca.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="course-card show long card-pgdca">
+        <div>
+            <div class="card-icon"><i class="fa-solid fa-user-graduate"></i></div>
+            <h3>PG Diploma (PGDCA)</h3>
+            <span class="badge badge-long">Long Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 1 Year</p>
+            <p style="color: #64748b; font-size: 0.95rem;">Post-graduate level advanced computer application training.</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/pgdca.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="course-card show long card-dtp">
+        <div>
+            <div class="card-icon"><i class="fa-solid fa-print"></i></div>
+            <h3>Desktop Publishing (DTP)</h3>
+            <span class="badge badge-long">Long Term</span>
+            <p class="duration"><i class="fa-regular fa-clock"></i> 1 Year</p>
+            <p style="color: #64748b; font-size: 0.95rem;">Master layout design for books, newspapers, magazines, and ads.</p>
+        </div>
+        <div class="card-actions">
+            <a href="assets/brochures/dtp.pdf" class="btn-prospectus" download><i class="fa-solid fa-file-pdf"></i> Prospectus</a>
+            <a href="register.html" class="btn-enroll">Enroll <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+</div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script>
+        function filterCourses(category) {
+            const cards = document.querySelectorAll('.course-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Update active button state
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Filter logic
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.classList.add('show');
+                } else {
+                    if (card.classList.contains(category)) {
+                        card.classList.add('show');
+                    } else {
+                        card.classList.remove('show');
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

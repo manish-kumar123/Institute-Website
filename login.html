@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Shri Sai Infotech</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-body">
+
+    <div class="login-container">
+        
+        <div class="login-visual">
+            <div class="visual-circle"></div>
+            <div class="visual-circle-2"></div>
+            <h2>Welcome to <br><span class="visual-accent">Future Learning</span></h2>
+            <p style="margin-top: 20px; font-size: 1.1rem; opacity: 0.9;">
+                Access your dashboard, track your progress, and shape your career with Shri Sai Infotech.
+            </p>
+            <div style="margin-top: auto;">
+                <p>Don't have an account?</p>
+                <a href="register.html" class="btn btn-outline" style="margin-top: 10px; display:inline-block;">Register Now</a>
+            </div>
+        </div>
+
+        <div class="login-form-side">
+            
+            <div id="view-login" class="auth-view active">
+                <div class="form-header">
+                    <h3>Sign In</h3>
+                    <p style="color: #718096;">Enter your credentials to continue</p>
+                </div>
+                
+                <form onsubmit="handleLogin(event)">
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" id="loginEmail" placeholder="student@example.com" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="loginPassword" placeholder="Enter password" required>
+                            <i class="fa-solid fa-eye toggle-password" onclick="togglePass('loginPassword', this)"></i>
+                        </div>
+                    </div>
+
+                    <a href="#" class="forgot-link" onclick="switchView('view-forgot')">Forgot Password?</a>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Login to Dashboard</button>
+                </form>
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="index.html" style="color: #718096; font-size: 0.9rem;">Back to Home</a>
+                </div>
+            </div>
+
+            <div id="view-forgot" class="auth-view">
+                <div class="form-header">
+                    <h3>Forgot Password?</h3>
+                    <p style="color: #718096;">Enter your email to receive an OTP</p>
+                </div>
+                
+                <form onsubmit="sendOTP(event)">
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" id="forgotEmail" placeholder="student@example.com" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Send OTP</button>
+                    <button type="button" class="btn btn-outline btn-block" style="border: 1px solid #ddd; color: #555;" onclick="switchView('view-login')">Cancel</button>
+                </form>
+            </div>
+
+            <div id="view-reset" class="auth-view">
+                <div class="form-header">
+                    <h3>Reset Password</h3>
+                    <p style="color: #718096;">Enter the OTP sent to your email</p>
+                </div>
+                
+                <form onsubmit="resetPassword(event)">
+                    <div class="input-group">
+                        <label>Enter OTP</label>
+                        <input type="text" id="otpInput" placeholder="6-digit OTP" maxlength="6" style="letter-spacing: 5px; font-weight: bold; text-align: center;" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>New Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="newPassword" placeholder="Create new password" required>
+                            <i class="fa-solid fa-eye toggle-password" onclick="togglePass('newPassword', this)"></i>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Update Password</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/auth_ui.js"></script>
+</body>
+</html>

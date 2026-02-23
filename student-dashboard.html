@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Shri Sai Infotech</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css"> </head>
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <i class="fa-solid fa-laptop-code"></i>
+                <span>SHRI SAI</span>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active"><i class="fa-solid fa-grid-2"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fa-solid fa-book-open"></i> My Courses</a></li>
+                <li><a href="#"><i class="fa-solid fa-file-pen"></i> Assignments <span class="badge-mini">2</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-bell"></i> Notifications</a></li>
+                <li><a href="#"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li style="margin-top: auto;"><a href="index.html" class="logout-link"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="mobile-toggle" onclick="toggleSidebar()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <h3>Dashboard</h3>
+                <div class="user-profile">
+                    <div class="notif-icon">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="dot"></span>
+                    </div>
+                    <img src="https://via.placeholder.com/40" alt="User" class="avatar">
+                    <span class="user-name">Rahul Sharma</span>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                
+                <div class="welcome-card">
+                    <div>
+                        <h2>Welcome back, Rahul!</h2>
+                        <p>You have 2 pending assignments due this week.</p>
+                    </div>
+                    <div class="illustration">
+                        <i class="fa-solid fa-rocket" style="font-size: 3rem; color: rgba(255,255,255,0.2);"></i>
+                    </div>
+                </div>
+
+                <div class="stats-grid-dash">
+                    <div class="stat-card">
+                        <div class="icon-box blue"><i class="fa-solid fa-book"></i></div>
+                        <div>
+                            <h4>Enrolled Courses</h4>
+                            <h2>1</h2>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon-box orange"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <h4>Pending Tasks</h4>
+                            <h2>2</h2>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="icon-box green"><i class="fa-solid fa-check-circle"></i></div>
+                        <div>
+                            <h4>Attendance</h4>
+                            <h2>85%</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-title"><h3>My Progress</h3></div>
+                <div class="course-progress-card">
+                    <div class="cp-header">
+                        <h4>Web Development Masterclass</h4>
+                        <span class="status-active">Active</span>
+                    </div>
+                    <p>Instructor: Amit Verma</p>
+                    <div class="progress-container">
+                        <div class="progress-bar-bg">
+                            <div class="progress-fill" style="width: 45%;"></div>
+                        </div>
+                        <span class="progress-text">45% Completed</span>
+                    </div>
+                    <button class="btn btn-primary btn-sm" style="margin-top: 15px;">Continue Learning</button>
+                </div>
+
+                <div class="section-title"><h3>Recent Assignments</h3></div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Assignment Title</th>
+                                <th>Due Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>HTML5 Structure Project</td>
+                                <td>Oct 15, 2026</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td><button class="btn-icon"><i class="fa-solid fa-upload"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>CSS Flexbox Layout</td>
+                                <td>Oct 10, 2026</td>
+                                <td><span class="status-badge submitted">Submitted</span></td>
+                                <td><button class="btn-icon"><i class="fa-solid fa-eye"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
